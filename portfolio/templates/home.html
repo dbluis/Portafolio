@@ -6,24 +6,26 @@
 
 <header class="row bg-black my-3">
     <div class="col-md-4">
-        <img src="{% static 'portfolio/porfile2.jpg' %}" alt="" width="400">
+        <img src="{% static 'portfolio/porfile2.jpg' %}" alt="" class="py-3 img-fluid">
     </div>
     <div class="col-md-8 my-auto">
         <h1>I am <strong>Luis Chanampa</strong></h1>
         <h3>I am a Python FullStack Developer</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Perferendis ipsa dignissimos id molestias, quo sapiente 
-            quia dolores eveniet doloremque, illum iure itaque eligendi veniam perspiciatis 
-            nulla molestias! Perferendis inventore quia, quam dignissimos nisi dolores molestiae, 
-            ex quas accusamus aliquam sint repellat, placeat id! Ullam itaque distinctio aspernatur, 
-            mollitia ab ducimus nobis!</p>
-        <a href="{% static 'portfolio/cv.pdf' %}" class="btn btn-primary btn-lg rounded-0 my-3">Download CV</a>
+        <p>Hello! I'm Luis Chanampa, a passionate backend web developer originally from San Juan, Argentina. <br> Specializing in the
+        use of Django for creating dynamic and functional web pages. My proficiency in HTML, CSS, and Python allows me to design
+        and develop high-quality, high-performance web projects. <br>
+        
+        On this page, I invite you to explore a sample of the projects I have completed. From web applications to complex
+        systems, each project reflects my dedication to creating innovative and effective solutions. <br> <br>
+        
+        Let me show you how I can bring your ideas to digital life!</p>
+        <a href="{% static 'portfolio/CV-Luis-Chanampa.pdf' %}" class="btn btn-primary btn-lg rounded-0 my-3">Download CV</a>
     </div>
 </header>
 
 <div class="row my-4 text-center">
     <h3>My projects</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, harum!</p>
+    <p>"Take a look at my portfolio of websites developed with Django"</p>
 
     {% for project in projects %}
         <div class="col-md-4 p-4">
