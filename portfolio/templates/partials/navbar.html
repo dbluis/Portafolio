@@ -15,6 +15,15 @@
                 <li class="nav-item d-flex align-items-center">
                     <a class="btn btn-primary btn-sm" href="{% static 'portfolio/CV-Luis-Chanampa.pdf' %}" target="_blank">Download CV</a>
                 </li>
+                {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout/">Cerrar sesion</a>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'singin' %}">iniciar sesion</a>
+                    </li>
+                {% endif %}
             </ul>
         </div>
     </div>

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<main class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md-4 mt-5">
+            <form action="" method="POST" class="card card-body text-dark" enctype="multipart/form-data">
+                <h1 class="text-dark">Eliminar post</h1>
+                {{error}}
+                {% csrf_token %}
+                {{post.title}}
+                <button class="btn btn-danger">Delete</button>
+            </form>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

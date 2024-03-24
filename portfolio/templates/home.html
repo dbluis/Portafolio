@@ -26,7 +26,9 @@
 <div class="row my-4 text-center">
     <h3>My projects</h3>
     <p>"Take a look at my portfolio of websites developed with Django"</p>
-
+    {% if user.is_authenticated %}
+    <a href="{% url 'create_project' %}" class="btn btn-primary">Crear Proyectos</a>
+    {% endif %}
     {% for project in projects %}
         <div class="col-md-4 p-4">
             <div class="card bg-black card-project">
@@ -37,6 +39,11 @@
                     
                     {% if project.url %}
                     <a href="{{project.url}}" class="btn btn-light rounded-0 btn-sm" target="_blank">{{project.url}}</a>
+                    {% endif %}
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'project_detail' project.id %}" class="btn btn-primary">Detail</a>
+                    <a href="{% url 'project_update' project.id %}" class="btn btn-primary">Editar</a>
+                    <a href="{% url 'project_delete' project.id %}" class="btn btn-danger">Eliminar</a>
                     {% endif %}
                 </div>
             </div>
